@@ -1,10 +1,11 @@
-package com.mariav.swoosh
+package com.mariav.swoosh.Controller
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.mariav.swoosh.Utilities.EXTRA_LEAGUE
+import com.mariav.swoosh.R
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
@@ -47,7 +48,7 @@ class LeagueActivity : BaseActivity() {
 
     fun onBtnNextClick(view: View) {
         if(selected_league != ""){
-            val SkillIntend = Intent(this,SkillActivity::class.java)
+            val SkillIntend = Intent(this, SkillActivity::class.java)
             /*We can transfer data to intend by using extra*/
             SkillIntend.putExtra(EXTRA_LEAGUE,selected_league)
             startActivity(SkillIntend)
